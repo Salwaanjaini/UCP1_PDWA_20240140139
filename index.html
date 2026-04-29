@@ -1,37 +1,111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Community</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Community - Beranda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body onload="renderTable()">
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="./index.html">Tech Community</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="./index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="./form.html">Form Anggota</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">Multimedia</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-    <a href="./index.html">Beranda</a>
-    <a href="./form.html">Form</a>
-    <a href="./gallery.html">Multimedia</a>
-</nav>
+  <header class="hero-section">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge rounded-pill text-bg-info mb-3">Komunitas Teknologi Modern</span>
+          <h1 class="display-5 fw-bold mb-3">Selamat Datang di Tech Community</h1>
+          <p class="lead text-secondary mb-4">
+            Tech Community adalah komunitas yang menjadi wadah belajar, berbagi, dan berkembang bersama
+            dalam bidang teknologi, pemrograman, desain digital, dan inovasi kreatif.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="./form.html" class="btn btn-primary btn-lg">Daftar Menjadi Anggota</a>
+            <a href="./gallery.html" class="btn btn-outline-light btn-lg text-dark">Lihat Multimedia</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="info-card p-4">
+            <h5 class="fw-semibold">Apa yang bisa kamu lakukan di sini?</h5>
+            <ul class="mt-3 mb-0 ps-3">
+              <li>Melihat informasi komunitas</li>
+              <li>Mengisi form pendaftaran anggota baru</li>
+              <li>Menikmati konten gambar, video, dan audio</li>
+              <li>Melihat contoh data anggota komunitas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="container">
-    <h1>Tech Community</h1>
-    <p>Ayo join komunitas kami untuk belajar teknologi bersama-sama.</p>
+  <main class="container py-5">
+    <section class="mb-5">
+      <div class="section-title mb-4">
+        <h2 class="fw-bold">Data Anggota Tech Community</h2>
+        <p class="text-secondary mb-0">Berikut contoh data anggota yang disimpan sementara menggunakan array JavaScript.</p>
+      </div>
 
-    <h3>Daftar Anggota</h3>
-    <table>
-        <thead>
+      <div class="table-responsive custom-table-wrapper shadow-sm">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-dark">
             <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>Minat</th>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Bidang Minat</th>
             </tr>
-        </thead>
-        <tbody id="memberTableBody"></tbody>
-    </table>
-</div>
+          </thead>
+          <tbody id="memberTableBody"></tbody>
+        </table>
+      </div>
+    </section>
 
-<script src="./js/app.js"></script>
+    <section class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card h-100">
+          <h5>Belajar Bersama</h5>
+          <p>Kegiatan diskusi, workshop, dan sharing session tentang dunia teknologi.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card h-100">
+          <h5>Networking</h5>
+          <p>Membangun relasi dengan sesama anggota yang memiliki minat dan tujuan yang sama.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card h-100">
+          <h5>Eksplorasi Karya</h5>
+          <p>Menampilkan karya, ide kreatif, dan inovasi digital dalam lingkungan komunitas.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 border-top bg-white">
+    <p class="mb-0">&copy; 2026 Tech Community. Dibuat untuk tugas HTML, CSS, dan JavaScript.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
